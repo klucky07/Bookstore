@@ -21,10 +21,12 @@ export const Home=()=>{
             });
     },[])
     return <div className='p-4'>
-        <div className='flex justify-between items-center'>
-            <h1 className='text-3xl my-8'>Books List</h1>
+    
+        <div className='flex border-r-4 border-b-4 justify-between items-center'>
+            <h1 className='text-3xl my-8 pl-5'>Books List</h1>
             <Link to={'/books/create'}>
-            <MdOutlineAddBox className=" text-sky-800 text-4xl"/>
+
+            <MdOutlineAddBox className=" text-sky-800  text-4xl hover:"/>
             </Link>
         </div>
         {loading?(
@@ -53,28 +55,28 @@ export const Home=()=>{
                 <tbody>
                     {books.map((book,index)=>(
                         <tr key={book._id} className='h-8'>
-                            <td className='border border-sla-700 rounded-md text-centre'>
+                            <td className='bg-yellow-50 border border-sla-700 font-light p-2 ml-2 rounded-md text-centre '>
                                 {index+1}
                             </td>
-                            <td className='border border-sla-700 rounded-md text-centre'>
-                                {book.title}
+                            <td className='bg-blue-50 border border-sla-700 p-2 ml-2 text-amber-950 font-semibold  rounded-md text-centre'>
+                                {book.title} 
                             </td>
-                            <td className='border border-sla-700 rounded-md text-centre'>
+                            <td className='bg-gray-50 border border-sla-700 p-2 ml-2 font-light rounded-md text-centre'>
                                 {book.author}
                             </td>
-                            <td className='border border-sla-700 rounded-md text-centre'>
+                            <td className='bg-green-50 border border-sla-700 p-2 ml-2  font-light  rounded-md text-centre'>
                                 {book.publishedYear}
                             </td>
                             <td className='border border-sla-700 rounded-md text-centre'>
                                 <div className='flex justify-center gap-x-4'>
                                     <Link to={`/books/details/${book._id}`}>
-                                    <BsInfoCircle className='text-2xl text-geen-800'/>
+                                    <BsInfoCircle className='text-2xl text-geen-800 hover:scale-110'/>
                                     </Link>
                                     <Link to={`/books/edit/${book._id}`}>
-                                    <AiOutlineEdit className='text-2xl text-yellow-600'/>
+                                    <AiOutlineEdit className='text-2xl text-yellow-600 hover:scale-125'/>
                                     </Link>
                                     <Link to={`/books/delete/${book._id}`}>
-                                    <MdOutlineDelete className='text-2xl text-red-500'/>
+                                    <MdOutlineDelete className='text-2xl text-red-500 hover:scale-125'/>
                                     </Link>
 
                                 </div>
@@ -84,6 +86,8 @@ export const Home=()=>{
                 </tbody>
             </table>
         )}
-       
+           <div className='flex justify-center pt-20 text-slate-600 text-8xl font-mono opacity-10 border  border-t-2'>
+        Library
+        </div>
     </div>
 }
