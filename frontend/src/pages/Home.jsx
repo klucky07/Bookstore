@@ -35,19 +35,19 @@ export const Home=()=>{
             <table className='w-full border-separate border-spacing-2'>
                 <thead>
                     <tr>
-                        <th className='border border-slate-600 rounded-md'>
+                        <th className='border border-b-4 border-r-4 border-slate-600 rounded-md'>
                             No
                         </th>
-                        <th className='border border-slate-600 rounded-md'>
+                        <th className='border border-b-4 border-r-4 border-slate-600 rounded-md'>
                             title
                         </th>
-                        <th className='border border-slate-600 rounded-md max-md:hidden'>
+                        <th className='border border-b-4 border-r-4 border-slate-600 rounded-md max-md:hidden'>
                            Author
                         </th>
-                        <th className='border border-slate-600 rounded-md max-md:hidden'>
+                        <th className='border border-b-4 border-r-4 border-slate-600 rounded-md max-md:hidden'>
                           publish Year
                         </th>
-                        <th className='border border-slate-600 rounded-md '>
+                        <th className='border border-b-4 border-r-4 border-slate-600 rounded-md '>
                           operations
                         </th>
                     </tr>
@@ -86,7 +86,7 @@ export const Home=()=>{
                 </tbody>
             </table>
         )}
-           <div className='flex justify-center pt-20 text-slate-600 text-8xl font-mono opacity-10 border  border-t-2'>
+           <div className='flex shadow-orange-400 shadow-2xl bg-gradient-to-br bg-green-100 justify-center pt-20 text-slate-600 text-8xl font-mono opacity-10 border  border-t-2'>
         Library
         </div>
     </div>
